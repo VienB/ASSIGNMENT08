@@ -9,19 +9,20 @@ print("VIEN ANGELO BERNALES | BSCOE 1-1 \n")
 
 import random
 
-GuessNumber = "True"
-User = int(input("GUESS A NUMBER (0-100): "))
-randNum = random.randint(0,100)
+User = int(input("ENTER YOUR GUESS NUMBER: "))
+randNum = random.randint(0, 100)
 
-while GuessNumber == "True":
-    if User > randNum:
-        print("GREATER THAN")
-        User = int(input("TRY AGAIN: "))
-        
+while randNum != User:
     if User < randNum:
-        print("LOWER THAN")
-        User = int(input("TRY AGAIN: "))
+        print("\nGREATER THAN")
+        User = int(input("TRY AGAIN:"))
 
-    elif User == randNum:
-        print("CORRECT!")
+    elif User > randNum:
+        print("\nLESS THAN")
+        User = int(input("TRY AGAIN:"))
+
+if User == randNum:
+        print("\nYOU ARE CORRECT!")
+        exit
+
 
